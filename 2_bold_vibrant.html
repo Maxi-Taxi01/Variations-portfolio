@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Klok — Bold & Vibrant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+:root{--bg:#0d0d0f;--ink:#0d0d0f;--paper:#f4f3ee;--accent:#ff3b1f;--accent2:#ffd400;--soft:#9a9a9a}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--paper);line-height:1.55}
+.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--accent)}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:.9rem 2rem;max-width:1280px;margin:0 auto}
+.logo{font-family:'Archivo Black';font-size:1.2rem;letter-spacing:-.01em;color:#0d0d0f}
+.navbar nav a{margin-left:1.6rem;font-weight:700;font-size:.85rem;text-transform:uppercase;color:#0d0d0f;transition:.2s}
+.navbar nav a:hover{color:var(--paper)}
+section{padding:7rem 0}
+.eyebrow{display:inline-block;background:var(--accent2);color:#0d0d0f;font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;margin-bottom:1.5rem}
+.hero{padding-top:10rem;background:var(--accent);color:#0d0d0f;overflow:hidden}
+.avail{display:inline-block;border:2px solid #0d0d0f;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border-radius:40px;margin-bottom:1.5rem}
+.hero h1{font-family:'Archivo Black';font-size:clamp(3rem,11vw,9.5rem);line-height:.86;letter-spacing:-.03em;text-transform:uppercase}
+.hero h1 span{display:block;-webkit-text-stroke:2px #0d0d0f;color:transparent}
+.hero-row{display:grid;grid-template-columns:1.3fr .8fr;gap:3rem;align-items:center;margin-top:2.5rem}
+.lead{font-size:1.25rem;font-weight:500;max-width:42ch}
+.btns{display:flex;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
+.btn{font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.05em;padding:1rem 1.8rem;border:2px solid #0d0d0f;transition:.2s}
+.btn-1{background:#0d0d0f;color:var(--accent2)}.btn-1:hover{background:transparent;color:#0d0d0f}
+.btn-2{background:transparent;color:#0d0d0f}.btn-2:hover{background:#0d0d0f;color:var(--paper)}
+.hero-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border:3px solid #0d0d0f}
+.statline{display:flex;flex-wrap:wrap;gap:0;border:2px solid #0d0d0f;margin-top:2.5rem}
+.statline>div{flex:1;min-width:130px;padding:1rem;border-right:2px solid #0d0d0f}
+.statline>div:last-child{border-right:0}
+.stat-label{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.stat-val{font-family:'Archivo Black';font-size:1.15rem}
+.marquee{background:var(--accent2);color:#0d0d0f;overflow:hidden;white-space:nowrap;border-top:3px solid #0d0d0f;border-bottom:3px solid #0d0d0f}
+.marquee span{display:inline-block;font-family:'Archivo Black';font-size:1.6rem;text-transform:uppercase;padding:.6rem 0;animation:scroll 18s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sec-title{font-family:'Archivo Black';font-size:clamp(2.4rem,6vw,5rem);text-transform:uppercase;line-height:.9;margin-bottom:2.5rem}
+.about{background:var(--paper);color:#0d0d0f}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.quote{font-family:'Archivo Black';font-size:2.4rem;line-height:1.05;color:var(--accent);text-transform:uppercase;margin-bottom:1.2rem}
+.about h2{font-family:'Archivo Black';font-size:2rem}
+.about h3{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:.9rem;letter-spacing:.08em;margin-bottom:1rem}
+.about p{font-weight:500}
+.sub{font-family:'Archivo Black';font-size:1.1rem;text-transform:uppercase;margin:2rem 0 1rem}
+.edu{display:flex;gap:1rem;padding:.8rem 0;border-top:2px solid #0d0d0f}
+.edu-year{font-weight:700;min-width:110px;color:var(--accent)}
+.edu-body h4{font-weight:700}.edu-body p{color:#555;font-size:.9rem}
+.skill{padding:.6rem 0;border-top:2px solid #0d0d0f}
+.skill-top{display:flex;justify-content:space-between;font-weight:500}
+.yrs{color:var(--accent);font-weight:700;font-size:.85rem}
+.bar{height:10px;background:#ddd;margin-top:.4rem}
+.bar span{display:block;height:100%;background:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem}
+.tag{background:#0d0d0f;color:var(--accent2);font-weight:700;text-transform:uppercase;font-size:.8rem;padding:.5rem .9rem}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{position:relative;border:3px solid var(--paper);overflow:hidden;display:block;min-height:340px}
+.card .card-img{position:absolute;inset:0}
+.card .card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .card-img img{transform:scale(1.08)}
+.card-body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;background:linear-gradient(180deg,transparent,rgba(13,13,15,.92))}
+.card-cat{font-weight:700;text-transform:uppercase;font-size:.72rem;color:var(--accent2);letter-spacing:.08em}
+.card-body h3{font-family:'Archivo Black';font-size:2rem;text-transform:uppercase}
+.card-body p{font-size:.88rem;color:#ddd;margin:.4rem 0}
+.card-link{font-weight:700;text-transform:uppercase;font-size:.8rem;color:var(--accent2)}
+.project{border-top:4px solid var(--accent)}
+.project.alt{background:var(--paper);color:#0d0d0f}
+.p-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:3rem}
+.p-head img{aspect-ratio:4/3;object-fit:cover;border:3px solid currentColor}
+.p-tag{display:inline-block;background:var(--accent);color:#0d0d0f;font-weight:700;text-transform:uppercase;font-size:.78rem;padding:.3rem .8rem}
+.p-title{font-family:'Archivo Black';font-size:clamp(2.5rem,7vw,5.5rem);text-transform:uppercase;line-height:.88;margin:1rem 0}
+.p-lead{font-size:1.2rem;font-weight:500;max-width:40ch}
+.p-info{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:1.5rem;border:2px solid currentColor}
+.pi{padding:.8rem 1rem;border-right:2px solid currentColor;border-top:2px solid currentColor}
+.pi:nth-child(-n+2){border-top:0}
+.pi:nth-child(2n){border-right:0}
+.pi-k{display:block;font-size:.68rem;font-weight:700;text-transform:uppercase;color:var(--accent)}
+.pi-v{font-weight:700}
+.p-body h3{font-family:'Archivo Black';font-size:1.8rem;text-transform:uppercase;margin-bottom:1rem}
+.p-body p{max-width:65ch;margin-bottom:2rem;font-weight:500}
+.p-imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.p-imgs img{aspect-ratio:1;object-fit:cover;border:3px solid currentColor}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.principle{border:3px solid var(--accent);padding:1.4rem}
+.principle h4{font-family:'Archivo Black';text-transform:uppercase;font-size:1.1rem;margin-bottom:.4rem}
+.principle p{font-size:.9rem}
+.personal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pcard{border:3px solid var(--paper)}
+.pcard .card-img img{aspect-ratio:4/3;object-fit:cover}
+.pcard-body{padding:1.2rem}
+.pcard .card-cat{display:block;color:var(--accent);margin-bottom:.3rem}
+.pcard h3{font-family:'Archivo Black';font-size:1.15rem;text-transform:uppercase;margin-bottom:.4rem}
+.pcard p{font-size:.85rem;color:#bbb}
+.contact{background:var(--accent2);color:#0d0d0f;text-align:center}
+.contact h2{font-family:'Archivo Black';font-size:clamp(3rem,9vw,7rem);text-transform:uppercase;line-height:.9}
+.contact a.btn-c{display:inline-block;margin-top:1.5rem;background:#0d0d0f;color:var(--accent2);font-weight:700;text-transform:uppercase;padding:1.1rem 2.6rem;border:3px solid #0d0d0f;transition:.2s}
+.contact a.btn-c:hover{background:transparent;color:#0d0d0f}
+.contact .meta{margin-top:1.5rem;font-weight:700}
+.footer{background:#0d0d0f;color:var(--accent2);text-align:center;padding:2rem;font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.1em}
+@media(max-width:860px){.hero-row,.about-grid,.p-head{grid-template-columns:1fr}.work-grid,.personal-grid,.principles{grid-template-columns:1fr}.navbar nav{display:none}}
+
+</style>
+</head>
+<body class="bold">
+
+<header class="header"><div class="navbar"><span class="logo">MAX KLOK</span><nav><a href="#about">Me</a><a href="#stunt">Stunt</a><a href="#vestige">Vestige</a><a href="#cpc">CPC Housing</a><a href="#personal">Personal</a></nav></div></header>
+
+<section class="hero" id="home"><div class="container">
+  <span class="avail">&#9679; Available for Graduation 2026</span>
+  <h1>Shaping <span>Future</span> Realities</h1>
+  <div class="hero-row">
+    <div><p class="lead">I am a multidisciplinary designer focused on creating modular systems, functional aesthetics, and human-centric housing solutions.</p>
+      <div class="btns"><a class="btn btn-1" href="#work">View Work</a><a class="btn btn-2" href="#about">About Me</a></div>
+      <div class="statline"><div><span class="stat-label">Name</span><span class="stat-val">MAX KLOK</span></div><div><span class="stat-label">Age</span><span class="stat-val">25 Years</span></div><div><span class="stat-label">Nationality</span><span class="stat-val">Dutch</span></div><div><span class="stat-label">Location</span><span class="stat-val">Netherlands</span></div></div>
+    </div>
+    <div class="hero-img"><img src="https://maxklok.nl/ImagesFromMax/Max%20foto's/Possible%20profile%20picture%203.png" alt="Max Klok"></div>
+  </div>
+</div></section>
+<div class="marquee"><span>STUNT&nbsp;&nbsp;&bull;&nbsp;&nbsp;VESTIGE&nbsp;&nbsp;&bull;&nbsp;&nbsp;CPC HOUSING&nbsp;&nbsp;&bull;&nbsp;&nbsp;3D PRINTING&nbsp;&nbsp;&bull;&nbsp;&nbsp;CIRCULAR DESIGN&nbsp;&nbsp;&bull;&nbsp;&nbsp;RHINO 3D&nbsp;&nbsp;&bull;&nbsp;&nbsp;GRASSHOPPER&nbsp;&nbsp;&bull;&nbsp;&nbsp;STUNT&nbsp;&nbsp;&bull;&nbsp;&nbsp;VESTIGE&nbsp;&nbsp;&bull;&nbsp;&nbsp;CPC HOUSING&nbsp;&nbsp;&bull;&nbsp;&nbsp;3D PRINTING&nbsp;&nbsp;&bull;&nbsp;&nbsp;CIRCULAR DESIGN&nbsp;&nbsp;&bull;&nbsp;&nbsp;RHINO 3D&nbsp;&nbsp;&bull;&nbsp;&nbsp;GRASSHOPPER</span></div>
+
+<section class="about" id="about"><div class="container">
+  <span class="eyebrow">About</span>
+  <div class="about-grid">
+    <div><p class="quote">&ldquo;Making life easier and more enjoyable&rdquo;</p><h2>Max Klok — Industrial Design Engineer</h2>
+      <p>I am a creative and inquisitive collaborator with a passion for architectural aesthetics and functional engineering. My hobbies include 3D printing, designing complex geometries, and constantly learning new skills to push the boundaries of what is possible in physical product design.</p><div class="sub">Education</div><div class="edu"><span class="edu-year">2022 — NOW</span><div class="edu-body"><h4>Industrial Design Engineering</h4><p>Haagse Hogeschool</p></div></div><div class="edu"><span class="edu-year">2020 — 2022</span><div class="edu-body"><h4>Architecture</h4><p>TU Delft</p></div></div><div class="edu"><span class="edu-year">2013 — 2020</span><div class="edu-body"><h4>Pre-University Education</h4><p>OSG Erasmus Almelo</p></div></div></div>
+    <div><div class="sub">Digital &amp; Technical</div><div class="skill"><div class="skill-top"><span>CAD (Rhino 3D)</span><span class="yrs">5+ Years</span></div><div class="bar"><span style="width:95%"></span></div></div><div class="skill"><div class="skill-top"><span>Grasshopper</span><span class="yrs">3+ Years</span></div><div class="bar"><span style="width:68%"></span></div></div><div class="skill"><div class="skill-top"><span>3D Printing</span><span class="yrs">5+ Years</span></div><div class="bar"><span style="width:95%"></span></div></div><div class="skill"><div class="skill-top"><span>Rendering</span><span class="yrs">5+ Years</span></div><div class="bar"><span style="width:90%"></span></div></div><div class="skill"><div class="skill-top"><span>Adobe Suite (PS, InDesign)</span><span class="yrs">5+ Years</span></div><div class="bar"><span style="width:88%"></span></div></div>
+      <div class="sub">Personal</div><div class="tags"><span class="tag">Creative</span><span class="tag">Inquisitive</span><span class="tag">Team Player</span><span class="tag">Collaborator</span><span class="tag">Architectural Knowledge</span><span class="tag">Drive</span></div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="container">
+  <span class="eyebrow">Portfolio</span><h2 class="sec-title">Selected<br>Work</h2>
+  <div class="work-grid">
+      <a class="card" href="#stunt"><div class="card-img"><img src="https://maxklok.nl/ImagesFromMax/Stunt%20project%20images/Stunt%20render%20final%20product.jpg" alt="STUNT"></div>
+        <div class="card-body"><span class="card-cat">Scale UpCycle</span><h3>STUNT</h3>
+          <p>Developing artefacts from recycled plastic sheets to popularize circularity among youth.</p><span class="card-link">View &rarr;</span></div></a>
+      <a class="card" href="#vestige"><div class="card-img"><img src="https://maxklok.nl/ImagesFromMax/New%20circular%20design%20furniture%20brand%20images/Circular%20furniture%20final%20product.png" alt="VESTIGE"></div>
+        <div class="card-body"><span class="card-cat">Circular Design</span><h3>VESTIGE</h3>
+          <p>Redefining furniture for the circular economy through modular, sustainable design.</p><span class="card-link">View &rarr;</span></div></a>
+      <a class="card" href="#cpc"><div class="card-img"><img src="https://maxklok.nl/ImagesFromMax/CPC%20housing%20images/Final%20product%20photo%204%20%282%29.png" alt="CPC HOUSING"></div>
+        <div class="card-body"><span class="card-cat">Architecture</span><h3>CPC HOUSING</h3>
+          <p>Redefining urban living through shared spaces and sustainable materials.</p><span class="card-link">View &rarr;</span></div></a></div>
+</div></section>
+
+    <section class="project alt" id="stunt"><div class="container">
+      <div class="p-head"><div><span class="p-tag">Scale UpCycle</span>
+        <h2 class="p-title">STUNT</h2><p class="p-lead">Developing artefacts from recycled plastic sheets to popularize circularity among youth.</p>
+        <div class="p-info"><div class="pi"><span class="pi-k">Role</span><span class="pi-v">Lead Product Designer</span></div><div class="pi"><span class="pi-k">Client</span><span class="pi-v">Stichting Stunt & The Upcycle</span></div><div class="pi"><span class="pi-k">Tools</span><span class="pi-v">Rhino 3D, CNC, User Testing, VCarve, Laser Cutter</span></div><div class="pi"><span class="pi-k">Duration</span><span class="pi-v">15 Weeks</span></div></div></div>
+        <img src="https://maxklok.nl/ImagesFromMax/Stunt%20project%20images/ChatGPT%20Image%2021%20dec%202025%2C%2014_43_57.png" alt="STUNT"></div>
+      <div class="p-body"><h3>From Waste to Wonder: Inclusive Design with Recycled Plastics</h3><p>Part of the “Scale UpCycle” initiative — a collaboration between The Hague University of Applied Sciences and Stichting Stunt, which provides job opportunities for people reintegrating into the workforce and transforms plastic waste into high-quality sheets. The assignment was to conceptualize and develop artefacts from 10 mm recycled HDPE sheets, enhancing a configurator that lets kids design their own toys effortlessly and popularizes recycling through participation.</p>
+        <div class="p-imgs"><img src="https://maxklok.nl/ImagesFromMax/Stunt%20project%20images/Stunt%20dotvoting%20(1).jpg" alt="STUNT"><img src="https://maxklok.nl/ImagesFromMax/Stunt%20project%20images/Stunt%20manufacturing%201.jpg" alt="STUNT"><img src="https://maxklok.nl/ImagesFromMax/Stunt%20project%20images/Stunt%20final%20product.jpg" alt="STUNT"></div></div>
+    </div></section>
+    <section class="project" id="vestige"><div class="container">
+      <div class="p-head"><div><span class="p-tag">Circular Design</span>
+        <h2 class="p-title">VESTIGE</h2><p class="p-lead">“Ascend your space with seamless storage solutions, uniting strength and tranquility through modular design.”</p>
+        <div class="p-info"><div class="pi"><span class="pi-k">Target Audience</span><span class="pi-v">Millennials & Gen Z</span></div><div class="pi"><span class="pi-k">Material</span><span class="pi-v">Sustainable Multiplex Wood</span></div><div class="pi"><span class="pi-k">Key Principles</span><span class="pi-v">Design for Disassembly, Closed Loop</span></div><div class="pi"><span class="pi-k">Dimensions</span><span class="pi-v">710 × 400 × 2000 mm</span></div></div></div>
+        <img src="https://maxklok.nl/ImagesFromMax/New%20circular%20design%20furniture%20brand%20images/Circular%20furniture%20final%20product.png" alt="VESTIGE"></div>
+      <div class="p-body"><h3>Redefining furniture for the circular economy</h3><p>80.2% of “fast furniture” ends up in landfills, driven by low-quality materials and inseparable components. VESTIGE bridges affordable fast furniture and premium eco-design: a modular system built for longevity, repairability and total disassembly, for a generation that values sustainability but lacks budget-friendly options.</p>
+        <div class="p-imgs"><img src="https://maxklok.nl/ImagesFromMax/New%20circular%20design%20furniture%20brand%20images/Circular%20furniture%20braindrawing.png" alt="VESTIGE"><img src="https://maxklok.nl/ImagesFromMax/New%20circular%20design%20furniture%20brand%20images/Circular%20furniture%20prototypes.png" alt="VESTIGE"><img src="https://maxklok.nl/ImagesFromMax/New%20circular%20design%20furniture%20brand%20images/Circular%20furniture%20explo.png" alt="VESTIGE"></div><div class="principles"><div class="principle"><h4>Design for Disassembly</h4><p>Every component can be separated, repaired, or recycled.</p></div><div class="principle"><h4>Material Honesty</h4><p>Exposed joinery and natural finishes celebrate the sustainable materials.</p></div><div class="principle"><h4>Life-Cycle Adaptability</h4><p>As users move or their needs change, Vestige adapts with them.</p></div></div></div>
+    </div></section>
+    <section class="project alt" id="cpc"><div class="container">
+      <div class="p-head"><div><span class="p-tag">Architecture</span>
+        <h2 class="p-title">CPC HOUSING</h2><p class="p-lead">Redefining urban living through shared spaces, sustainable materials, and a focus on community interaction.</p>
+        <div class="p-info"><div class="pi"><span class="pi-k">Location</span><span class="pi-v">Netherlands</span></div><div class="pi"><span class="pi-k">Type</span><span class="pi-v">Residential Complex</span></div><div class="pi"><span class="pi-k">Area</span><span class="pi-v">3830 m²</span></div><div class="pi"><span class="pi-k">Year</span><span class="pi-v">2022</span></div></div></div>
+        <img src="https://maxklok.nl/ImagesFromMax/CPC%20housing%20images/Final%20product%20photo%204%20%282%29.png" alt="CPC HOUSING"></div>
+      <div class="p-body"><h3>A Modern Collective</h3><p>The CPC Housing project explores the balance between privacy and community. It proposes a “Collective Private Commission” model where residents actively shape their living environment. Large open-plan communal areas encourage spontaneous interaction while maintaining high-quality private quarters; natural light and warm materials create an atmosphere both modern and homey.</p>
+        <div class="p-imgs"><img src="https://maxklok.nl/ImagesFromMax/CPC%20housing%20images/CPC%20living%20room%20render.jpg" alt="CPC HOUSING"><img src="https://maxklok.nl/ImagesFromMax/CPC%20housing%20images/CPC%20kitchen%20render.jpg" alt="CPC HOUSING"></div></div>
+    </div></section>
+
+<section id="personal"><div class="container">
+  <span class="eyebrow">Beyond Client Work</span><h2 class="sec-title">Personal<br>Projects</h2>
+  <div class="personal-grid">
+      <div class="pcard"><div class="card-img"><img src="https://maxklok.nl/ImagesFromMax/Beta/20260407_210519.jpg" alt="Beta RR 50 Track — 1/10 Scale Model"></div>
+        <div class="pcard-body"><span class="card-cat">3D Printing</span><h3>Beta RR 50 Track — 1/10 Scale Model</h3><p>A fully 3D printed 1/10 scale replica of the Beta RR 50 Track supermotard. Every component — frame, wheels, bodywork, details — was individually modelled in Rhino 3D and printed in multi-colour for a display-ready result.</p></div></div>
+      <div class="pcard"><div class="card-img"><img src="https://maxklok.nl/ImagesFromMax/Lamps/20260310_004609.jpg" alt="3D Printed Lamp Collection"></div>
+        <div class="pcard-body"><span class="card-cat">Product Design</span><h3>3D Printed Lamp Collection</h3><p>A modular lamp collection with interchangeable bases and shades. Multiple print iterations tested connection methods; flowing swirled geometries diffuse warm light, available as table, wall-mounted and pendant variations.</p></div></div>
+      <div class="pcard"><div class="card-img"><img src="https://maxklok.nl/ImagesFromMax/Computional%20redesign%20district%20images/1.png" alt="Computational Redesign District"></div>
+        <div class="pcard-body"><span class="card-cat">Computational Design</span><h3>Computational Redesign District</h3><p>An exploration of algorithmically generated urban layouts, using Grasshopper and parametric modelling to reimagine how districts could be designed for optimal livability and spatial flow.</p></div></div></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container">
+  <h2>Let&rsquo;s<br>Collaborate</h2>
+  <a class="btn-c" href="mailto:contact@maxklok.nl">Get in Touch</a>
+  <p class="meta">+31 6 16317598 &nbsp;&bull;&nbsp; contact@maxklok.nl</p>
+</div></section>
+<footer class="footer">&copy; 2025 Max Klok</footer>
+
+</body>
+</html>
